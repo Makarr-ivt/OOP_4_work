@@ -62,4 +62,5 @@
 - Youtube: ["Faster than Rust and C++: the PERFECT hash table"](https://youtu.be/DMQ_HcNSOAI?si=xkhsLOfKqTYUNqSw);
 - Хабр: ["Хеш-таблицы"](https://habr.com/ru/articles/509220/);
 - Википедия: ["Хеш-таблица"](https://ru.wikipedia.org/wiki/%D0%A5%D0%B5%D1%88-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0);
+- [Презентация по дисциплине ООП](https://docs.google.com/presentation/d/1mg0oAP9deW4_Xy7cWMZD7hOX8Ri9TQCG/edit#slide=id.g311ddbde9b8_0_2120) -- слайды (345-455);
 - 
