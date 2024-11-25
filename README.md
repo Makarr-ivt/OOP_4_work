@@ -62,5 +62,10 @@
 - Youtube: ["Faster than Rust and C++: the PERFECT hash table"](https://youtu.be/DMQ_HcNSOAI?si=xkhsLOfKqTYUNqSw);
 - Хабр: ["Хеш-таблицы"](https://habr.com/ru/articles/509220/);
 - Википедия: ["Хеш-таблица"](https://ru.wikipedia.org/wiki/%D0%A5%D0%B5%D1%88-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0);
+- Википедия: ["Хеш-функция"](https://ru.wikipedia.org/wiki/%D0%A5%D0%B5%D1%88-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F);
 - [Презентация по дисциплине ООП](https://docs.google.com/presentation/d/1mg0oAP9deW4_Xy7cWMZD7hOX8Ri9TQCG/edit#slide=id.g311ddbde9b8_0_2120) -- слайды (345-455);
+- Stackoverflow: ["How to build hash function for various template types?"](https://stackoverflow.com/questions/34563574/how-to-build-hash-function-for-various-template-types);
+- Хабр: ["Разработка интерфейсных классов на С++"](https://habr.com/ru/articles/427281/);
+- Stackoverflow на русском: ["Класс-интерфейс в C++, обязывающий реализовать operator[]"](https://ru.stackoverflow.com/questions/456562/%D0%9A%D0%BB%D0%B0%D1%81%D1%81-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81-%D0%B2-c-%D0%BE%D0%B1%D1%8F%D0%B7%D1%8B%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-operator);
+- Stackoverflow на русском: ["const и перегрузка operator[]"](https://ru.stackoverflow.com/questions/703531/const-%D0%B8-%D0%BF%D0%B5%D1%80%D0%B5%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-operator);
 - 
