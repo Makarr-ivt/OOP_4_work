@@ -57,6 +57,25 @@ private:
     void arrayRealloc();
 };
 
+template<typename Key, typename Value>
+size_t HashTableRealloc<Key, Value>::get_size() const {
+    return size;
+}
+
+template<typename Key, typename Value>
+void HashTableRealloc<Key, Value>::insert(const Key& key, const Value& value) {
+    size_t index = hash<Key>(key) % size;
+    for (int i = 0; i < size; ++i) {
+        if (array[(index+i)%size].is_deleted) {
+            array[(index+i)%size] = ElementRealloc(key, value);
+            ++size;
+            return;
+        };        
+    };
+    if (size * REALLOC_FACTOR > capacity * 100) {
+        arrayRealloc();
+    }
+}
 
 
 // реализация методов должна быть в том же файле!
