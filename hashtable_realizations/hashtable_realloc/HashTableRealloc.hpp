@@ -1,7 +1,7 @@
 /**
  * Хэш таблица, реализующая открытую адресацию:
  * Массив хранит сами пары "ключ: значение";
- * При коллизии хэш функция обходит массив
+     * При коллизии хэш функция обходит массив
  * в поисках свободного места;
  * когда свободные места заполняются,
  * выделяется массив большего объёма,
@@ -10,21 +10,40 @@
 #pragma once
 #include "HashTableInterface.hpp"
 #include "ElementRealloc.hpp"
-#include <string>
+#include <functional> // std::hash
+using namespace std;
 
 template<typename Key, typename Value>
 class HashTableRealloc: public HashTable<Key, Value> {
 public:
-    // add constructors here!!
-    ~HashTable() {}
+    HashTableRealloc(): size(0), capacity(START_CAPACITY){
+        ElementRealloc* array = new ElementRealloc(START_CAPACITY);
+        for (int i; i < capacity; ++i) {
+            array[i] = nullptr;
+        }
+    };
+    HashTableRealloc(const HashTableRealloc& other): size(other.size), capacity(other.capacity){
+        for (int i = 0; i < size; ++i)
+            if (other.array[i]){
+                array[i] = other.array[i];
+            } else { 
+                array[i] = nullptr;
+            }
+        };
+    ~HashTableRealloc() {
+        for (int i = 0; i < size; ++i)
+            if (array[i])
+                delete array[i];
+        delete[] array;
+    };
     void insert(const Key& key, const Value& value) override;
     bool remove(const Key& key) override;
 
     void clear() override;
-    size_t size() const override;
-    bool is_contains(const Key& key) override;
+    size_t get_size() const override;
+    bool is_contains(const Key& key) const override;
     bool is_empty() const override;
-    void load_to_file(string path) override;
+    void load_to_file(string path) const override;
     bool read_from_file(string path) override;
 
     Value& operator[](const Key& key) override;
@@ -37,7 +56,6 @@ private:
     ElementRealloc* array;
     void arrayRealloc();
 };
-
 
 
 
