@@ -121,5 +121,21 @@ void HashTableRealloc<Key, Value>::clear() {
     capacity = START_CAPACITY;
 }
 
-
+template<typename Key, typename Value>
+bool HashTableRealloc<Key, Value>::is_contains(const Key& key) const {
+size_t index = hash<Key>(key) % size;
+    if (array[index] == nullptr) {
+        return false;
+    }
+    for (int i = 0; i < size; ++i) {
+        if (array[(index+i)%size].key == key) {
+            if (array[(index+i)%size].is_deleted) {
+                return false;
+            } else {
+            return true;
+            }
+        };   
+    };
+    return false;    
+}
 // реализация методов должна быть в том же файле!
