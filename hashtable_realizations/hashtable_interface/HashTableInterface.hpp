@@ -8,7 +8,7 @@ template<typename Key, typename Value>
 class HashTable {
 public:
     virtual ~HashTable() {}
-    virtual bool insert(const Key& key, const Value& value) = 0;
+    virtual void insert(const Key& key, const Value& value) = 0;
     virtual bool remove(const Key& key) = 0;
 
     virtual void clear() = 0;

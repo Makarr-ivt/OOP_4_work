@@ -16,7 +16,7 @@ class HashTableRealloc: public HashTable<Key, Value> {
 public:
     // add constructors here!!
     ~HashTable() {}
-    bool insert(const Key& key, const Value& value) override;
+    void insert(const Key& key, const Value& value) override;
     bool remove(const Key& key) override;
 
     void clear() override;
@@ -34,7 +34,11 @@ private:
     size_t size;
     size_t capacity;
     ElementRealloc* array;
+    size_t hash(Key key);
     void arrayRealloc();
 };
+
+
+
 
 // реализация методов должна быть в том же файле!
