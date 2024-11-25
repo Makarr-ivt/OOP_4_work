@@ -111,4 +111,15 @@ bool HashTableRealloc<Key, Value>::remove(const Key& key) {
     };
     return false;
 }
+
+template<typename Key, typename Value>
+void HashTableRealloc<Key, Value>::clear() {
+    for (int i = 0; i < size; ++i) {
+        array[i] = nullptr;
+    };
+    size = 0;
+    capacity = START_CAPACITY;
+}
+
+
 // реализация методов должна быть в том же файле!
