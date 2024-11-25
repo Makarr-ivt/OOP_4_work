@@ -16,8 +16,8 @@ public:
     virtual size_t size() const = 0;
     virtual bool is_contains(const Key& key) = 0;
     virtual bool is_empty() const = 0;
-    virtual load_to_file(string path) = 0;
-    virtual read_from_file(string path) = 0;
+    virtual void load_to_file(string path) = 0;
+    virtual bool read_from_file(string path) = 0;
 
     virtual Value& operator[](const Key& key) = 0;
     virtual bool operator==(const HashTable& other) const = 0;
