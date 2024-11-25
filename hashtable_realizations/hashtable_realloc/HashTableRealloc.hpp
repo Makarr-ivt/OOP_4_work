@@ -85,11 +85,30 @@ void HashTableRealloc<Key, Value>::update(const Key& key, const Value& value) {
             array[(index+i)%size].value = value;
             array[(index+i)%size].is_deleted = false;
             return;
-        }
+        };
     };
     if (size * REALLOC_FACTOR > capacity * 100) {
         arrayRealloc();
-    }
+    };
 }
 
+template<typename Key, typename Value>
+bool HashTableRealloc<Key, Value>::remove(const Key& key) {
+    size_t index = hash<Key>(key) % size;
+    if (array[index] == nullptr) {
+        return false;
+    }
+    for (int i = 0; i < size; ++i) {
+        if (array[(index+i)%size].key == key) {
+            if (array[(index+i)%size].is_deleted) {
+                return false;
+            } else {
+            array[(index+i)%size].is_deleted = true;
+            --size;
+            return true;
+            }
+        };   
+    };
+    return false;
+}
 // реализация методов должна быть в том же файле!
