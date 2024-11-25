@@ -1,6 +1,2 @@
-#ifndef __CONSTANTS__
-#define __CONSTANTS__
-
+#pragma once
 #define START_CAPACITY 20
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef __ELEMENT_REALLOC__
-#define __ELEMENT_REALLOC__
+#pragma once
 
 template<typename Key, typename Value>
 struct ElementRealloc {
@@ -7,6 +6,3 @@ struct ElementRealloc {
     Value value;
     bool is_deleted = false;
 };
-
-
-#endif

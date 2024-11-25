@@ -1,6 +1,5 @@
 // Интерфейс для хэш-таблицы
-#ifndef __HASHTABLE_INTERFACE__
-#define __HASHTABLE_INTERFACE__
+#pragma once
 #include "constants.hpp"
 #include <string>
 using namespace std;
@@ -23,5 +22,3 @@ public:
     virtual bool operator==(const HashTable& other) const = 0;
     virtual HashTable& operator&&(const HashTable& other) = 0;
 };
-
-#endif

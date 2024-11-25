@@ -7,8 +7,7 @@
  * выделяется массив большего объёма,
  * все старые актуальные значения копируются.
  */
-#ifndef __HASHTABLE_REALLOC__
-#define __HASHTABLE_REALLOC__
+#pragma once
 #include "HashTableInterface.hpp"
 #include "ElementRealloc.hpp"
 
@@ -39,6 +38,3 @@ private:
 };
 
 // реализация методов должна быть в том же файле!
-
-
-#endif

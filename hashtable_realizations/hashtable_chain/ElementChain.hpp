@@ -1,5 +1,4 @@
-#ifndef __ELEMENT_CHAIN__
-#define __ELEMENT_CHAIN__
+#pragma once
 
 template<typename Key, typename Value>
 struct ElementChain {
@@ -7,6 +6,3 @@ struct ElementChain {
     Value value;
     ElementChain *next = nullptr;
 };
-
-
-#endif

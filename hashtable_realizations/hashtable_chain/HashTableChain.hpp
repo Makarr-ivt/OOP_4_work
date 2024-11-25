@@ -6,9 +6,4 @@
  * Коллизии просто приводят к тому, 
  * что появляются списки длиной более одного элемента.
  */
-#ifndef __HASHTABLE_CHAIN__
-#define __HASHTABLE_CHAIN__
-
-
-
-#endif
+#pragma once
