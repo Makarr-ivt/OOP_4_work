@@ -36,7 +36,7 @@ public:
                 delete array[i];
         delete[] array;
     };
-    void insert(const Key& key, const Value& value) override;
+    void update(const Key& key, const Value& value) override;
     bool remove(const Key& key) override;
 
     void clear() override;
@@ -74,7 +74,7 @@ size_t HashTableRealloc<Key, Value>::get_size() const {
 }
 
 template<typename Key, typename Value>
-void HashTableRealloc<Key, Value>::insert(const Key& key, const Value& value) {
+void HashTableRealloc<Key, Value>::update(const Key& key, const Value& value) {
     size_t index = hash<Key>(key) % size;
     for (int i = 0; i < size; ++i) {
         if (array[(index+i)%size] == nullptr) {
@@ -91,6 +91,5 @@ void HashTableRealloc<Key, Value>::insert(const Key& key, const Value& value) {
         arrayRealloc();
     }
 }
-
 
 // реализация методов должна быть в том же файле!
