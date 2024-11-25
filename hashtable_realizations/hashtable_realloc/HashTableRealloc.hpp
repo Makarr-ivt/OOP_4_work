@@ -10,6 +10,7 @@
 #pragma once
 #include "HashTableInterface.hpp"
 #include "ElementRealloc.hpp"
+#include <string>
 
 template<typename Key, typename Value>
 class HashTableRealloc: public HashTable<Key, Value> {
@@ -34,7 +35,6 @@ private:
     size_t size;
     size_t capacity;
     ElementRealloc* array;
-    size_t hash(Key key);
     void arrayRealloc();
 };
 
